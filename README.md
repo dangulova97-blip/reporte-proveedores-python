@@ -18,7 +18,7 @@ python reporting.py
 
 ## Ejemplo de resultado
 
-El script genera un archivo Excel con múltiples hojas:
+El script genera un archivo Excel con las siguientes hojas:
 
 - Resumen por área (ordenado de mayor a menor)
 - Resumen por estado
