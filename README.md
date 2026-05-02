@@ -14,3 +14,12 @@ Este proyecto procesa un archivo de datos de proveedores y genera resúmenes aut
 
 ## Cómo ejecutarlo
 python reporting.py
+
+
+## Ejemplo de resultado
+
+El script genera un archivo Excel con múltiples hojas:
+
+- Resumen por área (ordenado de mayor a menor)
+- Resumen por estado
+- Resumen de pendientes por área
