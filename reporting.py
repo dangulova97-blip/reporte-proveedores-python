@@ -21,11 +21,6 @@ resumen_estado = df.groupby('estado')['monto'].sum()
 print('\nResumen por estado:')
 print(resumen_estado)
 
-# guardar resultados
-with pd.ExcelWriter('reporte_final.xlsx') as writer:
-    resumen_area.to_excel(writer, sheet_name='Por Area')
-    resumen_estado.to_excel(writer, sheet_name='Por Estado')
-
 # filtrar pendientes
 pendientes = df[df['estado'] == 'Pendiente']
 
@@ -34,3 +29,9 @@ resumen_pendientes = pendientes.groupby('area')['monto'].sum()
 
 print('\nPendientes por área:')
 print(resumen_pendientes)
+
+# guardar resultados
+with pd.ExcelWriter('reporte_final.xlsx') as writer:
+    resumen_area.to_excel(writer, sheet_name = 'Por Area')
+    resumen_estado.to_excel(writer, sheet_name = 'Por Estado')
+    resumen_pendientes.to_excel(writer,sheet_name = 'Pendientes')
